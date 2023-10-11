@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Text from Image</title>
+  </head>
+  <script>
+    function preview() {
+      d_image.src = URL.createObjectURL(event.target.files[0]);
+    }
+  </script>
+  <body>
+    <p>Extract the text from Image, default lang=en</p>
+    <p>Uploads any image you want to extract</p>
+    <p>NOTE: Fancy character may not dedect properly</p>
+    <img
+      id="d_image"
+      src="{{ url_for("file",filename=image ) }}"
+      width="300"
+      height="300"
+    />
+    <!-- <img id="d_image" src="../uploads/pro.jpg" width="300" height="300" /> -->
+    <br />
+
+    <p>The extracted text is below</p>
+    <br />
+    <p>{{ text }}</p>
+  </body>
+</html>

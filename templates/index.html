@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Text from Image</title>
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"
+    ></script>
+  </head>
+  <script>
+    function preview() {
+      d_image.src = URL.createObjectURL(event.target.files[0]);
+    }
+  </script>
+  <body>
+    <p>Extract the text from Image, default lang=en</p>
+    <p>Uploads any image you want to extract</p>
+    <p>NOTE: Fancy character may not dedect properly</p>
+    <form action="/extract" method="POST" enctype="multipart/form-data">
+      <label for="image">Choose a picture:</label>
+      <input
+        type="file"
+        id="image"
+        name="image"
+        accept="image/png, image/jpeg"
+        onchange="preview()"
+      />
+      <br />
+      <img id="d_image" scr="" width="300" height="300" />
+      <br />
+      <button type="summit" onclick="$('#loading').show();">Extract</button>
+    </form>
+    <div id="loading" style="display: none">
+      <img src="loading.gif" alt="" />Loading!
+    </div>
+  </body>
+</html>
