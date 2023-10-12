@@ -29,7 +29,8 @@ flask --app < whatever your app is | in my case I use web > run
 ### TODO:
 
 - [x] The Basic fundamental
-- [ ] Style the Page
+- [x] Style the Page
+- [ ] Improvement
 
 ### OUTPUT:
 
@@ -38,3 +39,11 @@ flask --app < whatever your app is | in my case I use web > run
 
 2. The extract will be display in this play
    ![image](./screenshot/s2.png)
+
+### OUTPUT: with css
+
+1. Upload any image that contain text
+   ![image](./screenshot/s3.png)
+
+2. The extract will be display in this play
+   ![image](./screenshot/s4.png)

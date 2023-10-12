@@ -2,27 +2,37 @@
 <html>
   <head>
     <title>Text from Image</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <script>
     function preview() {
       d_image.src = URL.createObjectURL(event.target.files[0]);
     }
   </script>
-  <body>
-    <p>Extract the text from Image, default lang=en</p>
-    <p>Uploads any image you want to extract</p>
-    <p>NOTE: Fancy character may not dedect properly</p>
-    <img
-      id="d_image"
-      src="{{ url_for("file",filename=image ) }}"
-      width="300"
-      height="300"
-    />
-    <!-- <img id="d_image" src="../uploads/pro.jpg" width="300" height="300" /> -->
-    <br />
+  <body class="flex justify-center bg-teal-950 ">
+    <div class="flex justify-center" >
+      
+    <div class="text-lg p-10 text-white font-semibold">
+      <p>Extract the text from Image, default lang=en</p>
+      <p>Uploads any image you want to extract</p>
+      <p>NOTE: Fancy character may not dedect properly</p>
+      <div class="p-5">
+       <img
+        id="d_image"
+        src="{{ url_for("file",filename=image ) }}"
+        width="300"
+        height="300"
+      />  
+      </div>
+     
 
-    <p>The extracted text is below</p>
-    <br />
-    <p>{{ text }}</p>
+      <p class="p-2">The extracted text is below</p>
+      <div >
+      <p class="bg-teal-700 rounded-md p-2 max-w-sm break-all">{{ text }}</p>
+      </div>
+    </div>
+
+    </div>
+    
   </body>
 </html>
