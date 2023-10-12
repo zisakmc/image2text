@@ -1,5 +1,17 @@
 This program Extract the text from the image
 
+## Description:
+
+---
+
+This is a simple web pages, that extract a text in image (jpeg/png) file. Its use 'easyocr' a python library.
+
+The extraction may not be 100% accuracy, but sometimes it do the job done.
+
+For more detail of the library, look for yourself.
+
+## <https://github.com/JaidedAI/EasyOCR>
+
 1. Make python venv (virtual environment) name whatever you want
 
 2. git clone this repo
